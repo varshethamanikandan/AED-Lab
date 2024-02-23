@@ -6,11 +6,11 @@ public class Lab1ArrayList {
     public static void main(String[] args) {
         // Initialize ArrayList containing 5 names
         ArrayList<String> names = new ArrayList<>();
-        names.add("Alice");
-        names.add("Bob");
-        names.add("Charlie");
-        names.add("David");
-        names.add("Eve");
+        names.add("Pooja");
+        names.add("Noodhan");
+        names.add("Varshetha");
+        names.add("Lokanya");
+        names.add("Kashvitha");
 
         // Switch the first and last letters in each name
         ArrayList<String> switchedNames = switchFirstAndLastLetters(names);
