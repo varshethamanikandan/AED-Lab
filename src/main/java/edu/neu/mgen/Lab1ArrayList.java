@@ -3,7 +3,6 @@ package edu.neu.mgen;
 import java.util.ArrayList;
 
 public class Lab1ArrayList {
-
     public static void main(String[] args) {
         // Initialize ArrayList containing 5 names
         ArrayList<String> names = new ArrayList<>();
@@ -16,16 +15,12 @@ public class Lab1ArrayList {
         // Switch the first and last letters in each name
         ArrayList<String> switchedNames = switchFirstAndLastLetters(names);
 
-        // Format output
-        String originalNames = joinList(names);
-        String switchedOriginalNames = joinList(switchedNames);
-
-        // Print formatted output
-        System.out.println("Names = {" + originalNames + "}");
-        System.out.println("Names (switched) = {" + switchedOriginalNames + "}");
+        // Format and print output
+        printNames("Names", names);
+        printNames("Names (switched)", switchedNames);
     }
 
-    // Method to switch first and last letters in each name
+    // Method to switch the first and last letters in each name
     public static ArrayList<String> switchFirstAndLastLetters(ArrayList<String> names) {
         ArrayList<String> switchedNames = new ArrayList<>();
         for (String name : names) {
@@ -37,15 +32,15 @@ public class Lab1ArrayList {
         return switchedNames;
     }
 
-    // Method to join elements of ArrayList into a string
-    public static String joinList(ArrayList<String> list) {
+    // Method to print the names in a formatted manner
+    public static void printNames(String label, ArrayList<String> names) {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < list.size(); i++) {
-            sb.append(list.get(i));
-            if (i < list.size() - 1) {
+        for (int i = 0; i < names.size(); i++) {
+            sb.append(names.get(i));
+            if (i < names.size() - 1) {
                 sb.append(", ");
             }
         }
-        return sb.toString();
+        System.out.println(label + " = {" + sb.toString() + "}");
     }
 }
